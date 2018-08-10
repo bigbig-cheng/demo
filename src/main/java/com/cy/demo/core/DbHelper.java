@@ -9,8 +9,8 @@ import java.sql.SQLException;
  */
 public class DbHelper implements AutoCloseable{
 
-    private final static String DRIVER_NAME = ConfigHelper.getString("driver_name");
-    private final static String DRIVER_URL = ConfigHelper.getString("driver_url");
+    private final static String DRIVER_NAME = ConfigHelper.getString("jdbc.driver_name");
+    private final static String DRIVER_URL = ConfigHelper.getString("jdbc.driver_url");
 
     private final static ThreadLocal<Connection> connectionHolder = new ThreadLocal(){
         @Override
